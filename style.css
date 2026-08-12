@@ -131,6 +131,82 @@ body {
   display: none;
 }
 
+.posts-section {
+  margin: 3rem auto 0;
+  width: 100%;
+  max-width: 800px;
+  padding: 15px 20px;
+
+  background-color: #242526;
+  box-shadow: 1px 1px 1px 1px #2a2d2d;
+  border-radius: 12px;
+}
+
+.upload-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.upload-pfp {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.upload-text-area {
+  flex: 1;
+  padding: 14px 18px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: #3a3b3c;
+  color: white;
+  font-size: 16px;
+}
+
+.upload-text-area::placeholder {
+  color: #b0b3b8;
+}
+
+.posts-section hr {
+  border: none;
+  border-top: 1px solid #3e4042;
+  margin: 15px 0 10px;
+}
+
+.upload-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.upload-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.upload-option:hover {
+  background-color: #3a3b3c;
+}
+
+.upload-option span:last-child {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* MOBILE STYLING */
+
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -179,4 +255,27 @@ body {
   .nav-right-profile-img-mobile-show {
     display: block;
   }
+}
+
+.posts-section {
+  margin-top: 2rem;
+  padding: 15px;
+}
+
+.upload-option span:last-child {
+  font-size: 12px;
+}
+
+.posts-section {
+  margin-top: 2rem;
+  padding: 12px;
+}
+
+.upload-option {
+  gap: 4px;
+  padding: 8px 2px;
+}
+
+.upload-option span:last-child {
+  font-size: 11px;
 }
