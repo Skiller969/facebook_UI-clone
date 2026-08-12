@@ -1,6 +1,13 @@
 * {
-  margin: 4px;
+  margin: 0px;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #18191a;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
 .nav-bar {
@@ -10,6 +17,7 @@
   background-color: #242526;
   box-shadow: 1px 1px 1px 1px #2a2d2d;
   align-items: center;
+  padding: 0 20px;
 }
 
 .nav-left {
@@ -26,16 +34,22 @@
   padding: 6px;
   border-radius: 12px;
   border: none;
-  color: white;
+  color: #2a2d2d;
 }
 
 .search::placeholder {
   color: white;
 }
+.nav-left-profile-img-desktop-show {
+  display: block;
+}
+.nav-right-profile-img-mobile-show {
+  display: none;
+}
 
 .nav-center {
   display: flex;
-  gap: 73px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -43,7 +57,8 @@
 .nav-center .material-symbols-outlined {
   font-size: 30px;
 }
-.nav-profile-img {
+.nav-left-profile-img-desktop-show,
+.nav-right-profile-img-mobile-show {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -73,6 +88,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .story:hover {
@@ -95,4 +111,72 @@
   left: 10px;
   border-radius: 50%;
   border: 3px solid blue;
+}
+
+.story-user-name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+#desktop-hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-center {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .search {
+    width: 180px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .story-container {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .story {
+    flex-shrink: 0;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .nav-left-profile-img-desktop-show {
+    display: none;
+  }
+  .nav-right-profile-img-mobile-show {
+    display: block;
+  }
 }
