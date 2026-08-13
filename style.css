@@ -258,8 +258,9 @@ body {
 }
 
 .posts-section {
-  margin-top: 2rem;
-  padding: 15px;
+  width: calc(100% - 40px);
+  max-width: 800px;
+  margin: 3rem auto 0;
 }
 
 .upload-option span:last-child {
