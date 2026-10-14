@@ -34,11 +34,12 @@ body {
   padding: 6px;
   border-radius: 12px;
   border: none;
-  color: #2a2d2d;
+  background-color: #3a3b3c;
+  color: white;
 }
 
 .search::placeholder {
-  color: white;
+  color: #b0b3b8;
 }
 .nav-left-profile-img-desktop-show {
   display: block;
@@ -257,26 +258,25 @@ body {
   }
 }
 
-.posts-section {
-  width: calc(100% - 40px);
-  max-width: 800px;
-  margin: 3rem auto 0;
+@media (max-width: 768px) {
+  .posts-section {
+    width: calc(100% - 40px);
+    margin-top: 2rem;
+    padding: 12px;
+  }
+
+  .upload-option {
+    gap: 4px;
+    padding: 8px 2px;
+  }
+
+  .upload-option span:last-child {
+    font-size: 11px;
+  }
 }
 
-.upload-option span:last-child {
-  font-size: 12px;
-}
-
-.posts-section {
-  margin-top: 2rem;
-  padding: 12px;
-}
-
-.upload-option {
-  gap: 4px;
-  padding: 8px 2px;
-}
-
-.upload-option span:last-child {
-  font-size: 11px;
+@media (max-width: 400px) {
+  .search { width: min(180px, 50vw); }
+  .nav-center { gap: 8px; }
+  .nav-center .material-symbols-outlined { font-size: 26px; }
 }
